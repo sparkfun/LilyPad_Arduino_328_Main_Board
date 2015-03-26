@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -4609,6 +4609,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <package name="REVISION">
 <text x="0" y="0" size="1.778" layer="51">Revision By: </text>
 </package>
+<package name="FIDUCIAL-1X2">
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="MICRO-FIDUCIAL">
+<smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" cream="no"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SFE_LOGO_FLAME">
@@ -8351,6 +8357,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="-1.016" y="3.556" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="VCC" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
+<symbol name="FIDUCIAL">
+<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="SFE_LOGO_FLAME" prefix="LOGO">
@@ -8536,6 +8547,25 @@ Standard 8.5x11 US Letter frame</description>
 </gates>
 <devices>
 <device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FIDUCIAL" prefix="FID">
+<description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
+Various fiducial points for machine vision alignment.</description>
+<gates>
+<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="1X2" package="FIDUCIAL-1X2">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="UFIDUCIAL" package="MICRO-FIDUCIAL">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -10848,6 +10878,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="LOGO2" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="L"/>
 <part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD-REDUNDANT"/>
 <part name="U$22" library="SparkFun-Aesthetics" deviceset="REVISION" device=""/>
+<part name="FID1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
+<part name="FID2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
+<part name="GND10" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="P+8" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10859,13 +10893,18 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="167.64" y="12.7" size="2.1844" layer="94" font="vector">N. Seidle</text>
 <text x="170.942" y="6.858" size="2.1844" layer="94" font="vector">Dia Campbell</text>
 <text x="238.76" y="7.62" size="2.1844" layer="94" font="vector">v21</text>
+<text x="175.26" y="170.18" size="1.778" layer="91">Operational voltage 2.7-5.5v
+Compatible with 3.3 or 5v FTDI
+(Lilypad FTDI is 5v)
+
+*DISCONNECT BATTERY BEFORE PLUGGING IN FTDI BOARD*</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="V" x="147.32" y="0"/>
 <instance part="U1" gate="U$1" x="127" y="116.84" smashed="yes">
-<attribute name="NAME" x="109.22" y="145.288" size="1.778" layer="95"/>
-<attribute name="VALUE" x="109.474" y="78.486" size="1.778" layer="96"/>
+<attribute name="NAME" x="114.3" y="150.368" size="1.778" layer="95"/>
+<attribute name="VALUE" x="113.03" y="82.296" size="1.778" layer="96"/>
 </instance>
 <instance part="U$2" gate="G$1" x="172.72" y="144.78" smashed="yes"/>
 <instance part="U$3" gate="G$1" x="172.72" y="142.24" smashed="yes"/>
@@ -10914,7 +10953,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="GND8" gate="1" x="63.5" y="78.74"/>
 <instance part="U$1" gate="G$1" x="172.72" y="147.32" smashed="yes"/>
 <instance part="$0000003" gate="G$1" x="236.22" y="17.78"/>
-<instance part="JP3" gate="G$1" x="43.18" y="43.18"/>
+<instance part="JP3" gate="G$1" x="43.18" y="43.18" smashed="yes">
+<attribute name="NAME" x="38.862" y="49.022" size="1.778" layer="95"/>
+</instance>
 <instance part="P+1" gate="G$1" x="63.5" y="48.26" smashed="yes">
 <attribute name="VALUE" x="62.484" y="51.816" size="1.778" layer="96"/>
 </instance>
@@ -10945,6 +10986,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="NAME" x="81.28" y="137.16" size="1.778" layer="95" rot="R90"/>
 </instance>
 <instance part="U$22" gate="G$1" x="149.098" y="6.858"/>
+<instance part="FID1" gate="G$1" x="200.66" y="33.02"/>
+<instance part="FID2" gate="G$1" x="205.74" y="33.02"/>
+<instance part="GND10" gate="1" x="104.14" y="45.72"/>
+<instance part="P+8" gate="G$1" x="93.98" y="60.96" smashed="yes">
+<attribute name="VALUE" x="92.964" y="58.674" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -10996,12 +11043,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <wire x1="111.76" y1="55.88" x2="104.14" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="G$1" pin="CTS"/>
-<label x="104.14" y="55.88" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
-</segment>
-<segment>
+<pinref part="GND10" gate="1" pin="GND"/>
+<wire x1="104.14" y1="55.88" x2="104.14" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="53.34" x2="104.14" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="53.34" x2="104.14" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="G$1" pin="GND"/>
-<label x="104.14" y="53.34" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<junction x="104.14" y="53.34"/>
 </segment>
 <segment>
 <pinref part="U1" gate="U$1" pin="GND@5"/>
@@ -11052,9 +11099,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="P+7" gate="G$1" pin="VCC"/>
 </segment>
 <segment>
-<wire x1="111.76" y1="58.42" x2="104.14" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="G$1" pin="VCC"/>
-<label x="104.14" y="58.42" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<pinref part="P+8" gate="G$1" pin="VCC"/>
+<wire x1="111.76" y1="58.42" x2="93.98" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="58.42" x2="93.98" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U1" gate="U$1" pin="AVCC"/>
@@ -11323,4 +11371,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
