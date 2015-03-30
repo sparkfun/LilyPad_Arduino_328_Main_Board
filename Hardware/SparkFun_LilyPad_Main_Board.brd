@@ -1699,9 +1699,9 @@ design rules under a new name.</description>
 <element name="U$8" library="LilyPad-Wearables" package="PETAL-LONG-1-2SIDE" value="SEWTAP9" x="-6.13" y="20.89" rot="R286.3"/>
 <element name="U$7" library="LilyPad-Wearables" package="PETAL-LONG-1-2SIDE" value="SEWTAP9" x="0" y="21.7" rot="R270"/>
 <element name="U$14" library="LilyPad-Wearables" package="PETAL-LONG-1-2SIDE" value="SEWTAP9" x="-11.74" y="-18.26" rot="R57.3"/>
-<element name="D1" library="SparkFun-LED" package="LED-0603" value="GREEN" x="8" y="-9" rot="R180">
-<attribute name="PROD_ID" value="DIO-00821" x="8" y="-9" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" value="GREEN" x="8" y="-9" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="D1" library="SparkFun-LED" package="LED-0603" value="BLUE" x="8" y="-9" rot="R180">
+<attribute name="PROD_ID" value="DIO-08575" x="8" y="-9" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" value="BLUE" x="8" y="-9" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="R2" library="SparkFun-Resistors" package="0603-RES" value="330" x="8" y="-6" rot="R90">
 <attribute name="PROD_ID" value="RES-00818" x="8" y="-6" size="1.778" layer="27" rot="R90" display="off"/>
@@ -2247,6 +2247,8 @@ design rules under a new name.</description>
 <approved hash="8,1,7bddd6900676d20b"/>
 <approved hash="3,1,660c8cf28c2366dd"/>
 <approved hash="3,1,720c00f2002172df"/>
+<approved hash="3,16,f2a78ad98ad9f2a7"/>
+<approved hash="3,16,e58c5e84cdda184a"/>
 <approved hash="8,1,188bd78e2259230d"/>
 <approved hash="8,16,889d4f85cf2f31c6"/>
 <approved hash="8,16,c39777f26a1b7f02"/>

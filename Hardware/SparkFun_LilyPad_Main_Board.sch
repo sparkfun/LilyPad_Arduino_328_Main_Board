@@ -9579,51 +9579,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="-0.889" y="1.397" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-1.016" y="-1.778" size="0.4064" layer="27">&gt;VALUE</text>
 </package>
-<package name="LED-1206-BOTTOM">
-<wire x1="-2" y1="0.4" x2="-2" y2="-0.4" width="0.127" layer="49"/>
-<wire x1="-2.4" y1="0" x2="-1.6" y2="0" width="0.127" layer="49"/>
-<wire x1="1.6" y1="0" x2="2.4" y2="0" width="0.127" layer="49"/>
-<wire x1="-1.27" y1="0" x2="-0.381" y2="0" width="0.127" layer="49"/>
-<wire x1="-0.381" y1="0" x2="-0.381" y2="0.635" width="0.127" layer="49"/>
-<wire x1="-0.381" y1="0.635" x2="0.254" y2="0" width="0.127" layer="49"/>
-<wire x1="0.254" y1="0" x2="-0.381" y2="-0.635" width="0.127" layer="49"/>
-<wire x1="-0.381" y1="-0.635" x2="-0.381" y2="0" width="0.127" layer="49"/>
-<wire x1="0.254" y1="0" x2="0.254" y2="0.635" width="0.127" layer="49"/>
-<wire x1="0.254" y1="0" x2="0.254" y2="-0.635" width="0.127" layer="49"/>
-<wire x1="0.254" y1="0" x2="1.27" y2="0" width="0.127" layer="49"/>
-<rectangle x1="-0.75" y1="-0.75" x2="0.75" y2="0.75" layer="51"/>
-<smd name="A" x="-1.8" y="0" dx="1.5" dy="1.6" layer="1"/>
-<smd name="C" x="1.8" y="0" dx="1.5" dy="1.6" layer="1"/>
-<hole x="0" y="0" drill="2.3"/>
-<polygon width="0" layer="51">
-<vertex x="1.1" y="-0.5"/>
-<vertex x="1.1" y="0.5"/>
-<vertex x="1.6" y="0.5"/>
-<vertex x="1.6" y="0.25" curve="90"/>
-<vertex x="1.4" y="0.05"/>
-<vertex x="1.4" y="-0.05" curve="90"/>
-<vertex x="1.6" y="-0.25"/>
-<vertex x="1.6" y="-0.5"/>
-</polygon>
-<polygon width="0" layer="51">
-<vertex x="-1.1" y="0.5"/>
-<vertex x="-1.1" y="-0.5"/>
-<vertex x="-1.6" y="-0.5"/>
-<vertex x="-1.6" y="-0.25" curve="90"/>
-<vertex x="-1.4" y="-0.05"/>
-<vertex x="-1.4" y="0.05" curve="90"/>
-<vertex x="-1.6" y="0.25"/>
-<vertex x="-1.6" y="0.5"/>
-</polygon>
-<wire x1="1.016" y1="1.016" x2="2.7686" y2="1.016" width="0.127" layer="21"/>
-<wire x1="2.7686" y1="1.016" x2="2.7686" y2="-1.016" width="0.127" layer="21"/>
-<wire x1="2.7686" y1="-1.016" x2="1.016" y2="-1.016" width="0.127" layer="21"/>
-<wire x1="2.9972" y1="0" x2="3.3528" y2="0" width="0.127" layer="21"/>
-<wire x1="-1.016" y1="-1.016" x2="-2.7686" y2="-1.016" width="0.127" layer="21"/>
-<wire x1="-2.7686" y1="-1.016" x2="-2.7686" y2="1.016" width="0.127" layer="21"/>
-<wire x1="-2.7686" y1="1.016" x2="-1.016" y2="1.016" width="0.127" layer="21"/>
-<wire x1="-2.9972" y1="0" x2="-3.3528" y2="0" width="0.127" layer="21"/>
-<wire x1="-3.175" y1="0.1778" x2="-3.175" y2="-0.1778" width="0.127" layer="21"/>
+<package name="LUXEON-REBEL">
+<smd name="ANODE" x="-1.39" y="2.63" dx="1.91" dy="2.03" layer="1" roundness="50"/>
+<smd name="CATHODE" x="1.39" y="2.63" dx="1.91" dy="2.03" layer="1" roundness="50"/>
+<smd name="P$3" x="0" y="-1.42" dx="4.68" dy="3.03" layer="1" roundness="50"/>
+<text x="-2.54" y="3.175" size="0.508" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-3.175" size="0.508" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -9653,14 +9614,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="LED-GREEN" prefix="D" uservalue="yes">
-<description>&lt;B&gt;Various green LEDs&lt;br&gt;&lt;br&gt;&lt;/B&gt;
-Green LEDs used in SFE Production&lt;br&gt;&lt;br&gt;
-0603- DIO-00821&lt;br&gt;
-LARGE- DIO-00862&lt;br&gt;
-LILYPAD- DIO-09910&lt;br&gt;</description>
+<deviceset name="LED-BLUE" prefix="D" uservalue="yes">
+<description>&lt;H3&gt;Blue LEDs for production use&lt;/H3&gt;&lt;p&gt;
+Various blue LEDs stocked by SparkFun production&lt;br&gt;
+0603 - DIO-08575&lt;br&gt;
+Rebel - DIO-09553&lt;br&gt;
+1206 - DIO-09911</description>
 <gates>
-<gate name="G$1" symbol="LED" x="0" y="0"/>
+<gate name="G$1" symbol="LED" x="0" y="2.54"/>
 </gates>
 <devices>
 <device name="0603" package="LED-0603">
@@ -9670,44 +9631,32 @@ LILYPAD- DIO-09910&lt;br&gt;</description>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="DIO-00821" constant="no"/>
-<attribute name="VALUE" value="GREEN" constant="no"/>
+<attribute name="PROD_ID" value="DIO-08575"/>
+<attribute name="VALUE" value="BLUE"/>
 </technology>
 </technologies>
 </device>
-<device name="LILYPAD" package="LED-1206">
+<device name="1206" package="LED-1206">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="DIO-09910"/>
-<attribute name="VALUE" value="GREEN" constant="no"/>
+<attribute name="PROD_ID" value="DIO-09911"/>
+<attribute name="VALUE" value="BLUE" constant="no"/>
 </technology>
 </technologies>
 </device>
-<device name="LARGE" package="LED-1206">
+<device name="REBEL" package="LUXEON-REBEL">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="A" pad="ANODE"/>
+<connect gate="G$1" pin="C" pad="CATHODE"/>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="DIO-00862" constant="no"/>
-<attribute name="VALUE" value="GREEN" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="1206-BOTTOM" package="LED-1206-BOTTOM">
-<connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="DIO-11076" constant="no"/>
-<attribute name="VALUE" value="Green" constant="no"/>
+<attribute name="PROD_ID" value="DIO-09553"/>
+<attribute name="VALUE" value="BLUE"/>
 </technology>
 </technologies>
 </device>
@@ -10959,7 +10908,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="U$8" library="LilyPad-Wearables" deviceset="SEWTAP" device="9"/>
 <part name="U$7" library="LilyPad-Wearables" deviceset="SEWTAP" device="9"/>
 <part name="U$14" library="LilyPad-Wearables" deviceset="SEWTAP" device="9"/>
-<part name="D1" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN"/>
+<part name="D1" library="SparkFun-LED" deviceset="LED-BLUE" device="0603" value="BLUE"/>
 <part name="R2" library="SparkFun-Resistors" deviceset="330OHM1/10W1%(0603)" device="" value="330"/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
