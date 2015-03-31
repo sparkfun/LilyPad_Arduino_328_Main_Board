@@ -10957,7 +10957,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="167.64" y="12.7" size="2.1844" layer="94" font="vector">N. Seidle</text>
 <text x="170.942" y="6.858" size="2.1844" layer="94" font="vector">Dia Campbell</text>
 <text x="238.76" y="7.62" size="2.1844" layer="94" font="vector">v21</text>
-<text x="175.26" y="170.18" size="1.778" layer="91">Operational voltage 2.7-5.5v
+<text x="175.26" y="170.18" size="1.778" layer="97">Operational voltage 2.7-5.5v
 Compatible with 3.3 or 5v FTDI
 (Lilypad FTDI is 5v)
 
