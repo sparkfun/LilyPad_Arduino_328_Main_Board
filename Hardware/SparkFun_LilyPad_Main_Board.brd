@@ -540,7 +540,7 @@
 <text x="11.43" y="-8.89" size="1.016" layer="16" font="vector" ratio="20" rot="MR0">v21</text>
 <dimension x1="25" y1="0" x2="-25" y2="0" x3="0" y3="-27.94" textsize="1.778" textratio="15" layer="47" dtype="diameter" unit="inch"/>
 <text x="-6.35" y="-44.45" size="1.778" layer="47" font="vector" ratio="15">dimensions in inches</text>
-<text x="-8.89" y="27.94" size="1.778" layer="51" font="vector" ratio="15">purple 0.08mm</text>
+<text x="-8.89" y="27.94" size="1.778" layer="51" font="vector" ratio="15">purple 0.8 mm</text>
 <text x="7.112" y="-9.779" size="0.8128" layer="21" font="vector" ratio="15" rot="R90">13</text>
 <text x="-14.478" y="4.191" size="0.8128" layer="21" font="vector" ratio="15">RESET</text>
 <text x="-6.985" y="3.302" size="1.016" layer="21" font="vector" ratio="15">B</text>
